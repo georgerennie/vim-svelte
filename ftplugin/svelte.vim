@@ -27,17 +27,18 @@ if exists('loaded_matchit') && !exists('b:match_words')
         \ '<\@<=\([^/][^ \t>]*\)[^>]*\%(>\|$\):<\@<=/\1>'
 endif
 
+" This all commented out in this fork as ale has support for svelteserver by default and this messes with that
 " ALE fixing and linting.
-if exists('g:loaded_ale')
-  if !exists('b:ale_fixers')
-    let b:ale_fixers = ['eslint', 'prettier', 'prettier_standard']
-  endif
+" if exists('g:loaded_ale')
+"   if !exists('b:ale_fixers')
+"     let b:ale_fixers = ['eslint', 'prettier', 'prettier_standard']
+"   endif
 
-  if !exists('b:ale_linter_aliases')
-    let b:ale_linter_aliases = ['css', 'javascript']
-  endif
+"   if !exists('b:ale_linter_aliases')
+"     let b:ale_linter_aliases = ['css', 'javascript']
+"   endif
 
-  if !exists('b:ale_linters')
-    let b:ale_linters = ['stylelint', 'eslint']
-  endif
-endif
+"   if !exists('b:ale_linters')
+"     let b:ale_linters = ['stylelint', 'eslint']
+"   endif
+" endif
